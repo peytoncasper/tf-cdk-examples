@@ -2,9 +2,17 @@
   "waf_v2_rules": [{
     "name": "rule-0",
     "priority": 1,
-    "action": "allow",
-    "statement": {
-
-    }
+    "action": [{
+    }],
+    "statement": [{
+      "geo_match_statement": [{
+        "country_codes": ["US"]
+      }]
+    }],
+    "visibility_config": [{
+      "cloudwatchMetricsEnabled": false,
+      "metricName": "metric",
+      "sampledRequestsEnabled": false
+    }]
   }]
 }

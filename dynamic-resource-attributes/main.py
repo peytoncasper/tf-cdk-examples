@@ -1,7 +1,9 @@
 #!/usr/bin/env python
+import json
 from constructs import Construct
 from cdktf import App, TerraformStack
-from imports.aws import AwsProvider, WafRule, WafIpset, WafIpsetIpSetDescriptors, WafRulePredicates
+from imports.aws import AwsProvider, WafRule, WafIpset, WafIpsetIpSetDescriptors, Wafv2RuleGroup, Wafv2RuleGroupRule, \
+    Wafv2RuleGroupRuleAction, Wafv2RuleGroupVisibilityConfig
 
 
 class DynamicAttributesStack(TerraformStack):
@@ -11,33 +13,22 @@ class DynamicAttributesStack(TerraformStack):
         # define resources here
         AwsProvider(self, 'Aws', region='us-east-1')
 
-        wafRuleV2 = Wafv2RuleGroup(
-            id="wafRuleGroup-0",
-            name="tfWafRuleGroup",
-            scope="REGIONAL",
-            capacity=1,
+        file = open("waf_data.json", )
+        objects = json.load(file)
 
-        )
-
-
-        ipSet = WafIpset(self,
-                 id="tfIPSet-0",
-                 name="tfIPSet",
-                 ip_set_descriptors=[
-                     WafIpsetIpSetDescriptors(type="IPV4", value="192.0.7.0/24")
-                 ])
-
-        WafRule(self,
-                id="tfWAFRule-0",
-                name="tfWAFRule",
-                metric_name="tfWAFRule",
-                predicates=[
-                  WafRulePredicates(data_id=ipSet.id,negated=False,type="IPMatch")
-                ],
-                depends_on=[ipSet])
-
+        Wafv2RuleGroup(self,
+                       id="waf-rule-group",
+                       name="waf-rule-group",
+                       scope="REGIONAL",
+                       capacity=1,
+                       rule=[Wafv2RuleGroupRule(**objects["waf_v2_rules"][0])],
+                       visibility_config=[Wafv2RuleGroupVisibilityConfig(
+                           cloudwatch_metrics_enabled=False,
+                           metric_name="name",
+                           sampled_requests_enabled=False
+                       )]
+                       )
 
 app = App()
 DynamicAttributesStack(app, "dynamic-resource-attributes")
-
 app.synth()
