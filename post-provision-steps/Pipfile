@@ -8,3 +8,4 @@ python_version = "3"
 
 [packages]
 cdktf = "~=0.4.1"
+requests = "2.26.0"
