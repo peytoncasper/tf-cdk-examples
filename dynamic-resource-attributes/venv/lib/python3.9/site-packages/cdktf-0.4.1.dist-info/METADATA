@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: cdktf
+Version: 0.4.1
+Summary: Cloud Development Kit for Terraform
+Home-page: https://github.com/hashicorp/terraform-cdk
+Author: HashiCorp
+License: MPL-2.0
+Project-URL: Source, https://github.com/hashicorp/terraform-cdk.git
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: constructs (<4.0.0,>=3.3.75)
+Requires-Dist: jsii (<2.0.0,>=1.29.0)
+Requires-Dist: publication (>=0.0.3)
+
+# cdktf
+
+cdktf is a framework for defining cloud infrastructure using Terraform providers and modules. It allows for
+users to define infrastructure resources using higher-level programming languages.
+
+## Build
+
+Install dependencies
+
+```bash
+yarn install
+```
+
+Build the package
+
+```bash
+yarn build
+```
+
+

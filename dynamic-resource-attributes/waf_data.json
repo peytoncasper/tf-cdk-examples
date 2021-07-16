@@ -1,0 +1,10 @@
+{
+  "waf_v2_rules": [{
+    "name": "rule-0",
+    "priority": 1,
+    "action": "allow",
+    "statement": {
+
+    }
+  }]
+}

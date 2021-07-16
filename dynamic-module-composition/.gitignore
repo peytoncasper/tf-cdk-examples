@@ -1,0 +1,12 @@
+dist/
+imports/*
+!imports/__init__.py
+.terraform
+cdktf.out
+cdktf.log
+*terraform.*.tfstate*
+./declarative/.terraform
+./declarative/.terraform.lock.hcl
+./declarative/terraform.tfstate
+./declarative/terraform.tfstate.backup
+.idea/
