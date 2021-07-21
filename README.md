@@ -1,3 +1,7 @@
+# Terraform CDK Examples
+
+https://medium.com/@peytoncasper/4-use-cases-for-the-terraform-cdk-5864630d147e
+
 ## Dynamic Resource Attributes
 
 
