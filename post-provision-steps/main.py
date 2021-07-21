@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-import subprocess, sys, requests, os
+import subprocess, sys, requests, os, time
 from constructs import Construct
-from cdktf import App, TerraformStack, TerraformHclModule
+from cdktf import App, TerraformStack, TerraformHclModule, Manifest
 from imports.aws import AwsProvider
 
 
@@ -63,6 +63,7 @@ class AppStack(TerraformStack):
 if __name__ == "__main__":
     release = get_release()
     app = App()
+
     stack = AppStack(app, "post-provision-steps")
 
     stack.add_network(release["network"])
