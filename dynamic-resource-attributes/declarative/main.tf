@@ -10,7 +10,7 @@ resource "aws_wafv2_rule_group" "example" {
     priority = 1
 
     action {
-      block {}
+      allow {}
     }
 
     dynamic "statement" {

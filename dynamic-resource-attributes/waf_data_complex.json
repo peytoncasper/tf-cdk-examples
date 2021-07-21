@@ -8,9 +8,17 @@
       }]
     }],
     "statement": [{
-      "geoMatchStatement": [{
+      "orStatement": [{
+        "statement": [{
+            "geoMatchStatement": [{
             "countryCodes": ["US"]
+          }]
+          },{
+            "geoMatchStatement": [{
+            "countryCodes": ["US"]
+          }]
         }]
+      }]
     }],
     "visibility_config": [{
       "cloudwatchMetricsEnabled": false,

@@ -13,8 +13,6 @@ def get_activity():
 
 
 
-
-
 class BoredActivityStack(TerraformStack):
     def __init__(self, scope: Construct, ns: str):
         super().__init__(scope, ns)
