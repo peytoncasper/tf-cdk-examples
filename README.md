@@ -1,6 +1,8 @@
 # Terraform CDK Examples
 
-https://medium.com/@peytoncasper/4-use-cases-for-the-terraform-cdk-5864630d147e
+The Terraform CDK is a relatively new project that provides a nice extension to some of the areas where Terraform `dynamic` and `for_each` blocks might not provide the experience. Additionally the CDK provides us with a harness to integrate external services and data with Terraform. This repository contains a few example use cases on how to leverage the CDK within your envrionment. 
+
+Blog Post: https://medium.com/@peytoncasper/4-use-cases-for-the-terraform-cdk-5864630d147e
 
 ## Dynamic Resource Attributes
 
