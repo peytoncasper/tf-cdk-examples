@@ -21,7 +21,7 @@ Deploy
 
 ```
 export AWS_ACCESS_KEY_ID=""
-export AWS_SECRET_KEY=""
+export AWS_SECRET_ACCESS_KEY=""
 
 cd dynamic-resource-attributes
 pipenv install
@@ -41,7 +41,7 @@ Deploy
 
 ```
 export AWS_ACCESS_KEY_ID=""
-export AWS_SECRET_KEY=""
+export AWS_SECRET_ACCESS_KEY=""
 
 cd dynamic-module-composition
 pipenv install
@@ -63,7 +63,7 @@ Deploy
 
 ```
 export AWS_ACCESS_KEY_ID=""
-export AWS_SECRET_KEY=""
+export AWS_SECRET_ACCESS_KEY=""
 
 cd external-configuration-integration
 pipenv install
@@ -87,7 +87,7 @@ Deploy
 
 ```
 export AWS_ACCESS_KEY_ID=""
-export AWS_SECRET_KEY=""
+export AWS_SECRET_ACCESS_KEY=""
 
 cd post-provision-steps
 pipenv install
