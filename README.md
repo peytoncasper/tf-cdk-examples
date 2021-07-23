@@ -15,9 +15,9 @@ Contrast this to the ability for the TF CDK to simply parse a JSON object into a
 Deploy
 
 ```
+cd dynamic-resource-attributes
 pipenv install
 cdktf get
-cd dynamic-resource-attributes
 cdktf deploy
 ```
 
@@ -32,9 +32,9 @@ Terraform does not allow module versions to be dynamically defined at runtime. G
 Deploy
 
 ```
+cd dynamic-module-composition
 pipenv install
 cdktf get
-cd dynamic-module-composition
 cdktf deploy
 ```
 
@@ -51,9 +51,9 @@ This could easily be extended to any external service like Kafka, PostreSQL, Act
 Deploy
 
 ```
+cd external-configuration-integration
 pipenv install
 cdktf get
-cd external-configuration-integration
 cdktf deploy
 ```
 
@@ -72,8 +72,8 @@ Given that we are dynamically building the stack, we will need to run this via t
 Deploy
 
 ```
+cd post-provision-steps
 pipenv install
 cdktf get
-cd post-provision-steps
 python main.py
 ```
