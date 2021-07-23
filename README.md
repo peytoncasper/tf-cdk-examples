@@ -4,6 +4,11 @@ The Terraform CDK is a relatively new project that provides a nice extension to 
 
 Blog Post: https://medium.com/@peytoncasper/4-use-cases-for-the-terraform-cdk-5864630d147e
 
+
+## AWS Credentials
+
+All of these examples utilize AWS, so you'll need to generate and set your credentials accordingly.
+
 ## Dynamic Resource Attributes
 
 
@@ -15,6 +20,9 @@ Contrast this to the ability for the TF CDK to simply parse a JSON object into a
 Deploy
 
 ```
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_KEY=""
+
 cd dynamic-resource-attributes
 pipenv install
 cdktf get
@@ -32,6 +40,9 @@ Terraform does not allow module versions to be dynamically defined at runtime. G
 Deploy
 
 ```
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_KEY=""
+
 cd dynamic-module-composition
 pipenv install
 cdktf get
@@ -51,6 +62,9 @@ This could easily be extended to any external service like Kafka, PostreSQL, Act
 Deploy
 
 ```
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_KEY=""
+
 cd external-configuration-integration
 pipenv install
 cdktf get
@@ -72,6 +86,9 @@ Given that we are dynamically building the stack, we will need to run this via t
 Deploy
 
 ```
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_KEY=""
+
 cd post-provision-steps
 pipenv install
 cdktf get
